@@ -43,7 +43,6 @@ const List: React.FC<ListProps> = ({ listNumber }) => {
   return (
     <div className={`${styles.listContainer} ${styles[listClass]}`}>
       {" "}
-      {/* Apply dynamic class */}
       {items.map((item) => (
         <div key={item.id} className={styles.row}>
           <button className={styles.button}>Jump</button>{" "}

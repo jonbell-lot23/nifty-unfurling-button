@@ -47,17 +47,9 @@
   width: 0;
   overflow: hidden;
   transform: translateY(-50%);
-  background-color: #007bff;
   color: white;
   font-size: 12px;
   position: absolute;
-}
-
-.list-0 {
-  border: 1px solid gray;
-}
-
-.list-0 .button {
 }
 
 .list-0 .row:hover .button {
@@ -67,32 +59,37 @@
   height: 100%;
   border-top-right-radius: 8px;
   border-bottom-right-radius: 8px;
+  background-color: #007bff;
 }
 
-.list-1 {
-  border: 1px solid red;
+.list-1 .row:hover .button {
+  transition: width 0.2s ease;
+  visibility: visible;
+  width: 50px;
+  height: 100%;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  background-color: #0ea718;
 }
 
-.list-2 {
-  border: 1px solid orange;
+@keyframes expandButtonDelayed {
+  0%,
+  50% {
+    /* 50% of the animation time will correspond to 1 second */
+    width: 5px;
+  }
+  100% {
+    width: 50px;
+  }
 }
 
-.list-3 {
-  border: 1px solid green;
-}
-
-.list-4 {
-  border: 1px solid blue;
-}
-
-.list-5 {
-  border: 1px solid purple;
-}
-
-.list-6 {
-  border: 1px solid brown;
-}
-
-.list-7 {
-  border: 1px solid rgb(163, 163, 0);
+.list-3 .row:hover .button {
+  transition: width 0.2s ease;
+  visibility: visible;
+  width: 50px;
+  height: 100%;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  background-color: purple;
+  animation: expandButtonDelayed 2s forwards;
 }
