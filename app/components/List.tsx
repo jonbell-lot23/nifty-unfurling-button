@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import styles from "./List.module.css";
 
 // Helper function to generate random phrases
@@ -14,12 +15,11 @@ const generateRandomPhrases = (wordList: string[], numberOfPhrases: number) => {
 };
 
 interface ListProps {
-  listNumber: number; // Added prop for list number
+  listNumber: number;
 }
 
 const List: React.FC<ListProps> = ({ listNumber }) => {
-  // Updated to use the new prop
-  // Array of 10 words to create random phrases
+  const [buttonText, setButtonText] = useState("⬅️"); // State for managing button text
   const words = [
     "allocate",
     "buffer",
@@ -38,14 +38,19 @@ const List: React.FC<ListProps> = ({ listNumber }) => {
     content,
   }));
 
-  const listClass = `list-${listNumber}`; // Construct class name based on listNumber
+  const listClass = `list-${listNumber}`;
 
   return (
     <div className={`${styles.listContainer} ${styles[listClass]}`}>
-      {" "}
       {items.map((item) => (
         <div key={item.id} className={styles.row}>
-          <button className={styles.button}>Jump</button>{" "}
+          <button
+            className={styles.button}
+            onMouseOver={() => setButtonText("Rewind")}
+            onMouseOut={() => setButtonText("⬅️")}
+          >
+            {buttonText}
+          </button>
           <div className={styles.content}>{item.content}</div>
         </div>
       ))}

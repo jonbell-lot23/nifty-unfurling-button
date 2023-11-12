@@ -1,6 +1,10 @@
-// Home component
+"use client";
 import React from "react";
-import List from "./components/List";
+
+import dynamic from "next/dynamic";
+
+// Dynamically import the List component with SSR disabled
+const List = dynamic(() => import("./components/List"), { ssr: false });
 
 export default function Home() {
   const numberOfLists = 8;
