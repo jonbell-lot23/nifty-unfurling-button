@@ -1,0 +1,211 @@
+.button {
+  left: 0;
+  top: 50%;
+  cursor: pointer;
+  visibility: hidden;
+  width: 0;
+  overflow: hidden;
+  transform: translateY(-50%);
+  color: white;
+  font-size: 12px;
+  position: absolute;
+}
+
+.row:hover .button {
+  transition: all 0.3s ease;
+  visibility: visible;
+  width: 50px;
+  height: 100%;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  background-color: #4cd6a8;
+}
+
+@keyframes expandButtonDelayed {
+  0%,
+  50% {
+    /* 50% of the animation time will correspond to 1 second */
+    width: 5px;
+  }
+  100% {
+    width: 50px;
+  }
+}
+
+.listContainer {
+  float: left; /* Float containers to the left */
+  width: 300px; /* Set fixed width for each list container */
+  margin-right: 20px; /* Add space between the list containers */
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.row {
+  border-bottom: 1px solid #ccc;
+  padding: 8px;
+  background-color: #f9f9f9;
+  transition: background-color 0.3s;
+  position: relative;
+  width: 100%;
+}
+
+.row:first-child {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.row:last-child {
+  border-bottom: none;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.row:hover {
+  background-color: #f0f0f0;
+}
+
+.content {
+  margin-left: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 12px;
+}
+
+.listContainer {
+  float: left; /* Float containers to the left */
+  width: 300px; /* Set fixed width for each list container */
+  margin-right: 20px; /* Add space between the list containers */
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.row {
+  border-bottom: 1px solid #ccc;
+  padding: 8px;
+  background-color: #f9f9f9;
+  transition: background-color 0.3s;
+  position: relative;
+  width: 100%;
+}
+
+.row:first-child {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.row:last-child {
+  border-bottom: none;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.row:hover {
+  background-color: #f0f0f0;
+}
+
+.content {
+  margin-left: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 12px;
+}
+
+.button {
+  left: 0;
+  top: 50%;
+  cursor: pointer;
+  visibility: hidden;
+  width: 0;
+  overflow: hidden;
+  transform: translateY(-50%);
+  color: white;
+  font-size: 12px;
+  position: absolute;
+}
+
+.button-0 {
+  transition: all 0.3s ease;
+  visibility: visible;
+  width: 50px;
+  height: 100%;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  background-color: #007bff;
+}
+
+.button-1 {
+  transition: width 0.2s ease;
+  visibility: visible;
+  width: 50px;
+  height: 100%;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  background-color: #0ea718;
+}
+
+@keyframes expandButtonDelayed {
+  0%,
+  50% {
+    /* 50% of the animation time will correspond to 1 second */
+    width: 5px;
+  }
+  100% {
+    width: 50px;
+  }
+}
+
+.button-2 {
+  transition: width 0.2s ease;
+  visibility: visible;
+  width: 50px;
+  height: 100%;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  background-color: purple;
+  animation: expandButtonDelayed 2s forwards;
+}
+
+.listContainer {
+  float: left; /* Float containers to the left */
+  width: 300px; /* Set fixed width for each list container */
+  margin-right: 20px; /* Add space between the list containers */
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.row {
+  border-bottom: 1px solid #ccc;
+  padding: 8px;
+  background-color: #f9f9f9;
+  transition: background-color 0.3s;
+  position: relative;
+  width: 100%;
+}
+
+.row:first-child {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.row:last-child {
+  border-bottom: none;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.row:hover {
+  background-color: #f0f0f0;
+}
+
+.content {
+  margin-left: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 12px;
+}

@@ -1,7 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import styles from "./List.module.css";
-import HoverButton from "./HoverButton";
+import styles from "./List-5.module.css";
 
 // Helper function to generate random phrases
 const generateRandomPhrases = (wordList: string[], numberOfPhrases: number) => {
@@ -18,6 +17,22 @@ const generateRandomPhrases = (wordList: string[], numberOfPhrases: number) => {
 interface ListProps {
   listNumber: number;
 }
+
+// HoverButton component
+const HoverButton: React.FC = () => {
+  const [text, setText] = useState("⬅️");
+  const buttonClass = `button`;
+
+  return (
+    <button
+      className={`${styles.button} ${styles[buttonClass]}`}
+      onMouseOver={() => setText("Rewind")}
+      onMouseOut={() => setText("⬅️")}
+    >
+      {text}
+    </button>
+  );
+};
 
 const List: React.FC<ListProps> = ({ listNumber }) => {
   const words = [
@@ -44,11 +59,7 @@ const List: React.FC<ListProps> = ({ listNumber }) => {
     <div className={`${styles.listContainer} ${styles[listClass]}`}>
       {items.map((item) => (
         <div key={item.id} className={styles.row}>
-          <HoverButton
-            initialText="⬅️"
-            hoverText="Rewind"
-            buttonNumber={listNumber}
-          />
+          <HoverButton />
           <div className={styles.content}>{item.content}</div>
         </div>
       ))}
