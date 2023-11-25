@@ -1,190 +1,70 @@
-.button {
+.button,
+.buttonNoHover {
   left: 0;
   top: 50%;
-  cursor: pointer;
-  visibility: hidden;
-  width: 0;
-  overflow: hidden;
   transform: translateY(-50%);
+  position: absolute;
+  width: 0;
+  height: 100%;
+  padding: 3px 8px;
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
   color: white;
   font-size: 12px;
-  position: absolute;
-}
-
-.row:hover .button {
-  transition: all 0.3s ease;
-  visibility: visible;
-  width: 50px;
-  height: 100%;
-  border-top-right-radius: 8px;
-  border-bottom-right-radius: 8px;
-  background-color: #fff024;
-}
-
-@keyframes expandButtonDelayed {
-  0%,
-  50% {
-    /* 50% of the animation time will correspond to 1 second */
-    width: 5px;
-  }
-  100% {
-    width: 50px;
-  }
-}
-
-.listContainer {
-  float: left; /* Float containers to the left */
-  width: 300px; /* Set fixed width for each list container */
-  margin-right: 20px; /* Add space between the list containers */
-  margin-bottom: 20px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-}
-
-.row {
-  border-bottom: 1px solid #ccc;
-  padding: 8px;
-  background-color: #f9f9f9;
-  transition: background-color 0.3s;
-  position: relative;
-  width: 100%;
-}
-
-.row:first-child {
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
-}
-
-.row:last-child {
-  border-bottom: none;
-  border-bottom-left-radius: 8px;
-  border-bottom-right-radius: 8px;
-}
-
-.row:hover {
-  background-color: #f0f0f0;
-}
-
-.content {
-  margin-left: 10px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  font-size: 12px;
-}
-
-.listContainer {
-  float: left; /* Float containers to the left */
-  width: 300px; /* Set fixed width for each list container */
-  margin-right: 20px; /* Add space between the list containers */
-  margin-bottom: 20px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-}
-
-.row {
-  border-bottom: 1px solid #ccc;
-  padding: 8px;
-  background-color: #f9f9f9;
-  transition: background-color 0.3s;
-  position: relative;
-  width: 100%;
-}
-
-.row:first-child {
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
-}
-
-.row:last-child {
-  border-bottom: none;
-  border-bottom-left-radius: 8px;
-  border-bottom-right-radius: 8px;
-}
-
-.row:hover {
-  background-color: #f0f0f0;
-}
-
-.content {
-  margin-left: 10px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  font-size: 12px;
-}
-
-.button {
-  left: 0;
-  top: 50%;
   cursor: pointer;
-  visibility: hidden;
-  width: 0;
   overflow: hidden;
-  transform: translateY(-50%);
-  color: white;
-  font-size: 12px;
-  position: absolute;
-}
-
-.button-0 {
-  transition: all 0.3s ease;
-  visibility: visible;
-  width: 50px;
-  height: 100%;
+  white-space: nowrap;
   border-top-right-radius: 8px;
   border-bottom-right-radius: 8px;
+  background-color: transparent;
+  transition: none; /* No transition by default */
+}
+
+.row:hover .button,
+.row:hover .buttonNoHover {
+  opacity: 1;
+  width: 35px;
   background-color: #007bff;
 }
 
-.button-1 {
-  transition: width 0.2s ease;
-  visibility: visible;
-  width: 50px;
-  height: 100%;
-  border-top-right-radius: 8px;
-  border-bottom-right-radius: 8px;
-  background-color: #0ea718;
+.row:hover .button:hover {
+  width: 107px;
+  transition: width 0.3s ease;
 }
 
-@keyframes expandButtonDelayed {
-  0%,
-  50% {
-    /* 50% of the animation time will correspond to 1 second */
-    width: 5px;
-  }
-  100% {
-    width: 50px;
-  }
+.row:hover .buttonNoHover:hover {
+  transition: width 0.0001s ease;
 }
 
-.button-2 {
-  transition: width 0.2s ease;
-  visibility: visible;
-  width: 50px;
-  height: 100%;
-  border-top-right-radius: 8px;
-  border-bottom-right-radius: 8px;
-  background-color: purple;
-  animation: expandButtonDelayed 2s forwards;
+.flexContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.MessageIcon {
+  width: 14px;
+  height: 14px;
 }
 
 .listContainer {
-  float: left; /* Float containers to the left */
-  width: 300px; /* Set fixed width for each list container */
-  margin-right: 20px; /* Add space between the list containers */
+  float: left;
+  width: 300px;
+  margin-right: 20px;
   margin-bottom: 20px;
   border: 1px solid #ccc;
   border-radius: 8px;
 }
 
 .row {
+  position: relative;
+  width: 100%;
   border-bottom: 1px solid #ccc;
   padding: 8px;
   background-color: #f9f9f9;
-  transition: background-color 0.3s;
-  position: relative;
-  width: 100%;
 }
 
 .row:first-child {
@@ -208,4 +88,14 @@
   text-overflow: ellipsis;
   white-space: nowrap;
   font-size: 12px;
+}
+
+.textContainer {
+  width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.button:hover .textContainer {
+  width: auto;
 }
