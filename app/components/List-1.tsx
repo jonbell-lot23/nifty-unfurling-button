@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import styles from "./List-1.module.css";
 
 const BackArrowIcon = () => (
@@ -25,7 +25,6 @@ interface ListProps {
   listNumber: number;
 }
 
-// HoverButton component
 const HoverButton: React.FC = () => {
   const [showText, setShowText] = useState(false);
 
@@ -35,10 +34,14 @@ const HoverButton: React.FC = () => {
       onMouseOver={() => setShowText(true)}
       onMouseOut={() => setShowText(false)}
     >
-      <div className={styles.flexContainer}>
+      <div className={styles.iconContainer}>
         <BackArrowIcon />
-        {showText && <span> Time travel</span>}
       </div>
+      {showText && (
+        <div className={styles.textContainer}>
+          <span>Time travel</span>
+        </div>
+      )}
     </button>
   );
 };

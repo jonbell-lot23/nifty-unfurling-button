@@ -25,9 +25,8 @@
 }
 
 .row .button:hover {
-  width: 100px;
-  transition: all 0.1s ease;
-  font-weight: bold;
+  width: 107px;
+  transition: width 0.22s ease;
 }
 
 .flexContainer {
@@ -43,9 +42,9 @@
 }
 
 .listContainer {
-  float: left; /* Float containers to the left */
-  width: 300px; /* Set fixed width for each list container */
-  margin-right: 20px; /* Add space between the list containers */
+  float: left;
+  width: 300px;
+  margin-right: 20px;
   margin-bottom: 20px;
   border: 1px solid #ccc;
   border-radius: 8px;
@@ -81,4 +80,26 @@
   text-overflow: ellipsis;
   white-space: nowrap;
   font-size: 12px;
+}
+
+.iconContainer {
+  /* styles for the icon container */
+}
+
+.textContainer {
+  width: 0;
+  overflow: hidden;
+  transition: width 0.3s ease;
+  white-space: nowrap;
+}
+
+/* Hover effect on the button to expand the text */
+.button:hover .textContainer {
+  width: auto; /* or you can specify a fixed width */
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
