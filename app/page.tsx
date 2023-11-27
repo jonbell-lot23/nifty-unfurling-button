@@ -20,10 +20,6 @@ export default function Home() {
         <List2 listNumber={2} />
         <List3 listNumber={3} />
         <List4 listNumber={4} />
-        <List5 listNumber={5} />
-        <List6 listNumber={6} />
-        <List7 listNumber={7} />
-        <List8 listNumber={8} />
       </div>
     </main>
   );
